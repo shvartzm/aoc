@@ -16,7 +16,7 @@ int main(void){
     int counter = 0;
     int start = 50;
     for (int j = 0; j < i; j++){
-        if(direction == 'R'){
+        if(direction[i] == 'R'){
             start += num[i];
             if (start >= 100){
                 start %= 100;
