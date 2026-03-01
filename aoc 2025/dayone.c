@@ -16,16 +16,16 @@ int main(void){
     int counter = 0;
     int start = 50;
     for (int j = 0; j < i; j++){
-        if(direction[i] == 'R'){
-            start += num[i];
+        if(direction[j] == 'R'){
+            start += num[j];
             if (start >= 100){
                 start %= 100;
             }
         }
         else {
-            start -= num[i];
+            start -= num[j];
             if (start< 0 ){
-                start = (start * (-1)) % 100;
+                while (start < 0) start += 100;
             }
         }
         if (start == 0){
