@@ -19,13 +19,20 @@ int main(void){
         if(direction[j] == 'R'){
             start += num[j];
             if (start >= 100){
+               while (start > 0){
+                counter++;
+                start -= 100;
+               } 
                 start %= 100;
             }
         }
         else {
             start -= num[j];
             if (start< 0 ){
-                while (start < 0) start += 100;
+                while (start < 0){
+                counter++; 
+                start += 100;
+            }
             }
         }
         if (start == 0){
